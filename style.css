@@ -1,0 +1,14 @@
+h1{
+    font-family: "Actor";
+    text-shadow:   rgb(255, 255, 255) 2px 2px 2px;
+}
+body{
+    background-color:rgb(226, 226, 226);
+    text-align: center;
+}
+
+th,tr{
+    font-family: "Actor";
+    text-shadow:   rgb(233, 250, 4) 2px 2px 2px;
+    
+}

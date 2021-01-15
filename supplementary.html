@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Estopa Final Exam</title>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+    <h1>Suplementary Exam</h1>
+    <table id="table">
+        <tr>
+            <th>Name</th>
+            <th>Height</th>
+            <th>Place</th>
+        </tr>
+    </table>
+    <br>
+    </center>
+    <script type="text/javascript">
+
+
+        
+        //Looping a Triangle
+        var hashtag = "";
+
+        for (var i = 0; i < 7; i++) {
+            hashtag += "#";
+            console.log(hashtag);
+
+        }
+        console.log("")
+
+ 
+
+        //Bean Counting
+
+        function countBs(s) {
+            var count = 0;
+            for (var i = 0; i < s.length; i += 1) {
+                if (s.charAt(i) === "B")
+                    count += 1;
+            }
+            return count;
+        }
+
+        function countChar(s, c) {
+            var count = 0;
+            for (var i = 0; i < s.length; i += 1) {
+                if (s.charAt(i) === c)
+                    count += 1;
+            }
+            return count;
+        }
+        console.log("Result for countBs(Bequeath):  " + countBs("Bequeath"));
+        console.log("Result for countChar(Barrage):  " + countChar("Barrage", "a"))
+        console.log("")
+
+       
+
+        //Reversing an Array
+
+        function reverseArray(array) {
+            results = [];
+            for (let object of array) {
+                results.unshift(object);
+            }
+            return results;
+        }
+
+        function reverseArrayInPlace(array) {
+            let len = array.length;
+            for (let i = 0; i < Math.floor(len / 2); i++) {
+                console.log(i, len - i - 1, array[i], array[len - i - 1], array);
+                let swap = array[i];
+                array[i] = array[len - i - 1];
+                array[len - i - 1] = swap;
+            }
+            return array;
+        }
+
+        console.log(reverseArray(["A", "B", "C"]));
+
+        let arrayValue = [1, 2, 3, 4, 5];
+        reverseArrayInPlace(arrayValue);
+        console.log(arrayValue);
+
+        let arrayValue2 = [1, 2, 3, 4];
+        reverseArrayInPlace(arrayValue2);
+        console.log(arrayValue2);
+
+       
+        //Creating table
+    
+
+        var mountains = [
+            {
+                "name": "Kilimanjaro",
+                "height": 5895,
+                "place": "Tanzania"
+            },
+            {
+                "name": "Everest",
+                "height": 8848,
+                "place": "Nepal"
+            },
+            {
+                "name": "Mayon",
+                "height": 2463,
+                "place": "Philippines"
+            },
+            {
+                "name": "Denali",
+                "height": 6190,
+                "place": "USA"
+            }
+
+        ]
+
+        mountains.forEach(mountain => {
+            let tr = document.createElement('tr');
+            tr.innerHTML = `<td>${mountain.name}</td><td>${mountain.height}</td><td>${mountain.place}</td>`
+            document.getElementById("table").appendChild(tr);
+        })
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
